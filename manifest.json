@@ -1,0 +1,16 @@
+{
+  "name": "Goto profile",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Selecione o texto e abra o perfil daquele usuário",
+  "background": {
+    "scripts": [
+      "src/background.js"
+    ],
+    "persistent": false
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs"
+  ]
+}
