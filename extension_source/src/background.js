@@ -19,6 +19,13 @@
     "contexts": ["selection"]
   });
 
+  chrome.contextMenus.create({
+    "id": "goto-twitter",
+    "parentId": "goto-profile",
+    "title": "Twitter",
+    "contexts": ["selection"]
+  });
+
 
 chrome.contextMenus.onClicked.addListener(function (info){
   let uri
@@ -29,6 +36,8 @@ chrome.contextMenus.onClicked.addListener(function (info){
     case "goto-github":
       uri = `http://www.github.com/${info.selectionText.trim()}`
       break;
+    case "goto-twitter":
+      uri = `http://www.twitter.com/${info.selectionText.trim()}`
   }
   chrome.tabs.create({url: uri})
   })
